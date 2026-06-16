@@ -1,174 +1,554 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oral Pets - Clínica Veterinaria</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OralPets · Odontología Veterinaria para Perros y Gatos en Medellín</title>
+    <meta
+      name="description"
+      content="Especialistas en odontología canina y felina en Medellín. +5.000 mascotas atendidas. Sedes Guayabal y La Frontera. Agenda online."
+    />
+    <meta
+      name="keywords"
+      content="odontología veterinaria Medellín, limpieza dental perros Medellín, detartraje canino felino, veterinario dental Antioquia, salud oral mascotas Medellín"
+    />
+    <meta name="theme-color" content="#2766AE" />
+    <meta property="og:title" content="OralPets · Odontología Veterinaria en Medellín" />
+    <meta
+      property="og:description"
+      content="Odontología especializada para perros y gatos. Agenda por llamada, WhatsApp o agenda online."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-oralpets.png" />
+    <link rel="preload" as="image" href="assets/hero-oralpets.png" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar__logo">
-      <span class="logo-icon">🐾</span>
-      <span class="logo-text">Oral<strong>Pets</strong></span>
-    </div>
-    <ul class="navbar__links">
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#promociones">Promociones</a></li>
-      <li><a href="#resultados">Antes y después</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a href="#contacto" class="btn btn--outline">Agendar cita</a>
-    <button class="navbar__toggle" aria-label="Abrir menú">&#9776;</button>
-  </nav>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.ORALPETS_GTM_ID = "GTM-XXXXXXX";
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <p class="hero__tag">Clínica Veterinaria para caninos y felinos</p>
-      <h1 class="hero__title">El bienestar de tu<br /><span>perro o gato</span>, nuestra prioridad</h1>
-      <p class="hero__subtitle">
-        En Oral Pets cuidamos a tus caninos y felinos con amor, experiencia
-        y la más alta tecnología veterinaria. 🐶🐱
-      </p>
-      <div class="hero__actions">
-        <a href="#contacto" class="btn btn--primary">Agendar cita</a>
-        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
-      </div>
-    </div>
+      if (!window.ORALPETS_GTM_ID.includes("XXXX")) {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", window.ORALPETS_GTM_ID);
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "OralPets",
+        "description": "Odontología veterinaria especializada para perros y gatos en Medellín.",
+        "url": "https://oralpets.com/",
+        "telephone": "+573154841552",
+        "email": "oralpets@gmail.com",
+        "image": "https://oralpets.com/assets/hero-oralpets.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle 1B # 66-61, Barrio Mayorca, Guayabal",
+          "addressLocality": "Medellín",
+          "addressRegion": "Antioquia",
+          "addressCountry": "CO"
+        },
+        "areaServed": ["Medellín", "Guayabal", "La Frontera", "El Poblado", "Laureles", "Envigado", "Belén"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/oralpets/"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
-    <div class="hero__cards">
-      <div class="card">
-        <span class="card__icon">🩺</span>
-        <h3>Consulta general</h3>
-        <p>Diagnóstico preventivo y curativo para perros y gatos.</p>
-      </div>
-      <div class="card">
-        <span class="card__icon">✂️</span>
-        <h3>Estética animal</h3>
-        <p>Baño, corte y cuidado profesional para caninos y felinos.</p>
-      </div>
-      <div class="card">
-        <span class="card__icon">💉</span>
-        <h3>Vacunación</h3>
-        <p>Plan de vacunas completo para tu perro o gato.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="stats__item">
-      <span class="stats__number">+500</span>
-      <span class="stats__label">Caninos y felinos atendidos</span>
-    </div>
-    <div class="stats__item">
-      <span class="stats__number">5+</span>
-      <span class="stats__label">Años de experiencia</span>
-    </div>
-    <div class="stats__item">
-      <span class="stats__number">100%</span>
-      <span class="stats__label">Amor por perros y gatos</span>
-    </div>
-  </section>
-
-  <!-- PROMOCIONES -->
-  <section class="promos" id="promociones">
-    <div class="promos__header">
-      <p class="section-tag">✨ Temporada especial</p>
-      <h2>Promociones para tu <span>canino o felino</span></h2>
-      <p class="section-sub">¡No dejes pasar estas ofertas! Escríbenos y pregunta por el plan que más le convenga a tu perro o gato.</p>
-    </div>
-
-    <div class="promos__grid">
-      <div class="promo-card promo-card--featured">
-        <div class="promo-badge">⭐ Más popular</div>
-        <span class="promo-icon">😁</span>
-        <h3>Sonrisa Saludable</h3>
-        <p>Limpieza dental profesional + revisión bucal completa para caninos y felinos. ¡Dientes limpios, mascota feliz!</p>
-        <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20información%20sobre%20el%20plan%20Sonrisa%20Saludable%20🐾" target="_blank" class="btn btn--primary">Preguntar por este plan</a>
-      </div>
-
-      <div class="promo-card">
-        <span class="promo-icon">💉</span>
-        <h3>Vacunas al día</h3>
-        <p>Plan completo de vacunación para perros y gatos. Protege a tu canino o felino con nuestro esquema actualizado.</p>
-        <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20información%20sobre%20el%20plan%20de%20Vacunas%20🐾" target="_blank" class="btn btn--primary">Preguntar por este plan</a>
-      </div>
-
-      <div class="promo-card">
-        <span class="promo-icon">✨</span>
-        <h3>Spa para mascotas</h3>
-        <p>Baño medicado + corte + perfume para caninos y felinos. ¡Tu perro o gato merece sentirse increíble!</p>
-        <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20información%20sobre%20el%20Spa%20🐾" target="_blank" class="btn btn--primary">Preguntar por este plan</a>
-      </div>
-    </div>
-
-    <div class="promos__cta">
-      <p>¿Tienes dudas sobre qué plan es mejor para tu perro o gato? <strong>¡Escríbenos!</strong></p>
-      <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20saber%20más%20sobre%20los%20planes%20de%20Oral%20Pets%20🐾" target="_blank" class="btn btn--whatsapp">
-        💬 Escríbenos por WhatsApp
+    <header class="topbar" aria-label="Barra principal de OralPets">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">OP</span>
+        <span>
+          <strong>OralPets</strong>
+          <small>Odontología veterinaria</small>
+        </span>
       </a>
-    </div>
-  </section>
+      <p class="topbar-info">Tel. 315 484 1552 · Lun-Sáb 8am-6pm · Guayabal y La Frontera, Medellín</p>
+      <a
+        class="btn btn-primary compact"
+        href="https://wa.me/573154841552?text=Hola%2C%20quiero%20agendar%20una%20consulta%20odontol%C3%B3gica%20para%20mi%20mascota"
+        data-track="click_whatsapp"
+      >
+        Agendar por WhatsApp
+      </a>
+    </header>
 
-  <!-- ANTES Y DESPUÉS -->
-  <section class="resultados" id="resultados">
-    <div class="resultados__header">
-      <p class="section-tag">📸 Nuestros resultados</p>
-      <h2>Antes y después</h2>
-      <p class="section-sub">Resultados reales en caninos y felinos atendidos en Oral Pets.</p>
-    </div>
-
-    <div class="resultados__grid">
-
-      <!-- Caso Canino -->
-      <div class="resultado-card">
-        <div class="resultado-imgs">
-          <div class="resultado-img">
-            <span class="resultado-label">Antes</span>
-            <img src="imagenes_antes_despues/canino-antes.jpg" alt="Canino antes del tratamiento" />
+    <main id="main">
+      <section id="inicio" class="hero section-dark" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-content reveal">
+          <p class="eyebrow">+<span class="counter" data-target="5000">0</span> mascotas tratadas en Medellín · 3-7 años de trayectoria</p>
+          <h1 id="hero-title">Tu peludo merece una sonrisa sana y una vida sin dolor.</h1>
+          <p class="hero-copy">
+            Especialistas en odontología veterinaria para perros y gatos en Medellín. Atención inmediata por WhatsApp o llamada.
+          </p>
+          <div class="hero-actions" aria-label="Opciones de contacto inmediato">
+            <div class="cta-stack">
+              <a class="btn btn-primary btn-xl" href="tel:+573154841552" data-track="click_call">Llamar ahora</a>
+              <span>Respondemos directamente</span>
+            </div>
+            <div class="cta-stack">
+              <a
+                class="btn btn-whatsapp btn-xl"
+                href="https://wa.me/573154841552?text=Hola%2C%20quiero%20agendar%20una%20consulta%20odontol%C3%B3gica%20para%20mi%20mascota"
+                data-track="click_whatsapp"
+              >
+                Escribir por WhatsApp
+              </a>
+              <span>Respuesta promedio en menos de 30 minutos</span>
+            </div>
           </div>
-          <div class="resultado-arrow">→</div>
-          <div class="resultado-img">
-            <span class="resultado-label resultado-label--after">Después</span>
-            <img src="imagenes_antes_despues/canino-despues.jpg" alt="Canino después del tratamiento" />
+          <p class="trust-line">★★★★★ Reseñas reales en Google · Más de 5.000 mascotas felices</p>
+        </div>
+        <div class="hero-band" aria-label="Diferenciales principales">
+          <div><span aria-hidden="true">🏆</span> Únicos especialistas en odontología veterinaria en Medellín</div>
+          <div><span aria-hidden="true">💉</span> Anestesiólogo presente en cada procedimiento</div>
+          <div><span aria-hidden="true">🦷</span> Equipos de ultrasonido dental de última generación</div>
+        </div>
+      </section>
+
+      <section id="educar" class="section section-educar" aria-labelledby="educar-title">
+        <div class="container split reveal">
+          <div>
+            <p class="section-kicker">Bloque 2 · Educar + agendar</p>
+            <h2 id="educar-title">Tu primera visita: una evaluación experta sin sorpresas</h2>
+            <p>
+              La consulta odontológica inicial es la base de todo lo que hacemos. Un Médico Veterinario Odontólogo evalúa la boca de tu mascota completamente: dientes, encías, paladar, mordida y signos de enfermedad periodontal.
+            </p>
+            <p>
+              A diferencia de una veterinaria general, aquí el ojo entrenado del especialista detecta problemas tempranos que otros pasan por alto: piezas con dolor oculto, infecciones bajo la encía o desgastes que comprometen la salud a largo plazo.
+            </p>
+            <p>
+              Te explicamos todo en lenguaje claro, te mostramos lo que vemos, y juntos diseñamos el plan ideal para tu peludo.
+            </p>
+          </div>
+          <figure class="media-panel">
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="assets/caso-2.jpeg"
+              alt="Gato atendido por un profesional veterinario de OralPets"
+              loading="lazy"
+              width="900"
+              height="900"
+            />
+          </figure>
+        </div>
+
+        <div class="container split reverse reveal">
+          <figure class="media-panel">
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="assets/equipo-oralpets.png"
+              alt="Mensaje de OralPets sobre revisiones preventivas a tiempo"
+              loading="lazy"
+              width="1024"
+              height="1280"
+            />
+          </figure>
+          <div>
+            <h2>La seguridad de tu mascota no es negociable</h2>
+            <p>
+              Antes de cualquier procedimiento bajo anestesia, realizamos <strong>exámenes de sangre prequirúrgicos completos</strong>. ¿Por qué? Porque la salud de tu mascota va más allá de su boca.
+            </p>
+            <ul class="check-list">
+              <li>Confirmar que el hígado y los riñones funcionan correctamente para procesar la anestesia.</li>
+              <li>Detectar enfermedades silenciosas que podrían complicar el procedimiento.</li>
+              <li>Ajustar el protocolo anestésico al estado real de cada mascota.</li>
+            </ul>
+            <div class="note-box">
+              <strong>No es burocracia.</strong> Es la diferencia entre una clínica que improvisa y una que protege. Si los exámenes detectan algo, te lo comunicamos antes de proceder. La salud de tu mascota manda.
+            </div>
           </div>
         </div>
-        <p class="resultado-desc">🐶 <strong>Canino</strong> · Limpieza dental y revisión bucal completa</p>
-      </div>
 
-      <!-- Caso Felino -->
-      <div class="resultado-card">
-        <div class="resultado-imgs">
-          <div class="resultado-img">
-            <span class="resultado-label">Antes</span>
-            <img src="imagenes_antes_despues/felino-antes.jpg" alt="Felino antes del tratamiento" />
+        <div class="container reveal">
+          <div class="section-heading compact-heading">
+            <h2>Lo que ningún tutor sabe hasta que es tarde</h2>
+            <p>Estos signos suelen parecer pequeños, pero pueden indicar dolor o enfermedad periodontal avanzada.</p>
           </div>
-          <div class="resultado-arrow">→</div>
-          <div class="resultado-img">
-            <span class="resultado-label resultado-label--after">Después</span>
-            <img src="imagenes_antes_despues/felino-despues.jpg" alt="Felino después del tratamiento" />
+          <div class="symptom-grid">
+            <article><span aria-hidden="true">😮</span><strong>Mal aliento persistente</strong></article>
+            <article><span aria-hidden="true">🦷</span><strong>Sarro amarillo o café visible</strong></article>
+            <article><span aria-hidden="true">🩸</span><strong>Encías rojas, inflamadas o sangrantes</strong></article>
+            <article><span aria-hidden="true">😣</span><strong>Dificultad para comer o masticar</strong></article>
+            <article><span aria-hidden="true">🐾</span><strong>Pérdida o movilidad de piezas dentales</strong></article>
+            <article><span aria-hidden="true">😴</span><strong>Apatía o cambios en su ánimo</strong></article>
+          </div>
+          <div class="alert-box">
+            <strong>La enfermedad periodontal no se queda en la boca.</strong> Las bacterias acumuladas viajan por el torrente sanguíneo y atacan el <strong>corazón</strong>, los <strong>riñones</strong> y el <strong>hígado</strong> de tu mascota. Lo que parece "solo mal aliento" puede acortar años de vida.
+            <br /><br />
+            El 80% de los perros y el 70% de los gatos mayores de 3 años ya tienen algún grado de enfermedad periodontal. La buena noticia: es prevenible y tratable.
           </div>
         </div>
-        <p class="resultado-desc">🐱 <strong>Felino</strong> · Limpieza dental y cuidado bucal especializado</p>
+
+        <div class="booking-band reveal">
+          <div class="container booking-inner">
+            <div>
+              <h2>Agenda en menos de 60 segundos, sin escribir a nadie</h2>
+              <p>Elige día y hora directamente en nuestra agenda online. Recibes confirmación inmediata.</p>
+              <small>El mismo sistema que usamos en nuestro Instagram @oralpets · 23.000 seguidores confían en él.</small>
+            </div>
+            <a
+              class="btn btn-primary btn-xl js-confirmafy"
+              href="https://wa.me/573154841552?text=Hola%2C%20quiero%20agendar%20online%20una%20consulta%20odontol%C3%B3gica%20para%20mi%20mascota"
+              target="_blank"
+              rel="noopener"
+            >
+              Agendar mi consulta ahora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="proceso" class="section" aria-labelledby="proceso-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Bloque 3 · Proceso completo + precios</p>
+            <h2 id="proceso-title">De la consulta a la sonrisa: todo lo que hacemos por tu peludo</h2>
+            <p>Sin sorpresas, sin letra pequeña, sin pasos ocultos.</p>
+          </div>
+          <ol class="timeline">
+            <li>
+              <span>1</span>
+              <h3>Consulta odontológica inicial</h3>
+              <p>Evaluación completa con Médico Veterinario Odontólogo Especialista. Diagnóstico, fotografías intraorales si aplica, y plan de tratamiento personalizado.</p>
+            </li>
+            <li>
+              <span>2</span>
+              <h3>Exámenes de sangre prequirúrgicos</h3>
+              <p>Hemograma y química sanguínea para confirmar que tu mascota está apta para el procedimiento bajo anestesia.</p>
+            </li>
+            <li>
+              <span>3</span>
+              <h3>Aprobación médica</h3>
+              <p>Nuestro equipo revisa los resultados y aprueba o ajusta el procedimiento. Tu mascota solo entra a quirófano si todo está en óptimas condiciones.</p>
+            </li>
+            <li>
+              <span>4</span>
+              <h3>Agendamiento del procedimiento</h3>
+              <p>Coordinamos contigo el día y hora. Te enviamos instrucciones precisas de ayuno y preparación.</p>
+            </li>
+            <li>
+              <span>5</span>
+              <h3>Procedimiento con equipo de especialistas</h3>
+              <p>Médico veterinario odontólogo + médico anestesiólogo veterinario + auxiliares capacitados. Monitoreo de signos vitales en tiempo real durante todo el procedimiento.</p>
+            </li>
+            <li>
+              <span>6</span>
+              <h3>Revisiones post-procedimiento</h3>
+              <p>Seguimiento programado para verificar la cicatrización, resolver dudas y asegurar que tu mascota está perfectamente recuperada.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="price-band reveal">
+          <div class="container">
+            <div class="section-heading compact-heading">
+              <h2>Precios claros, porque el cuidado de tu mascota no debe ser una caja negra</h2>
+            </div>
+            <div class="price-table" role="table" aria-label="Rango de precios OralPets">
+              <div class="price-row heading" role="row">
+                <span role="columnheader">Servicio</span>
+                <span role="columnheader">Inversión</span>
+              </div>
+              <div class="price-row" role="row">
+                <span role="cell">Consulta odontológica inicial</span>
+                <strong role="cell">Por confirmar</strong>
+              </div>
+              <div class="price-row" role="row">
+                <span role="cell">Limpieza dental profesional según tamaño, raza y condición</span>
+                <strong role="cell">Rango por confirmar</strong>
+              </div>
+              <div class="price-row featured" role="row">
+                <span role="cell">Plan Sonrisa Saludable (paquete completo)</span>
+                <strong role="cell"><s>$1.200.000</s> → $950.000</strong>
+              </div>
+            </div>
+            <div class="info-box">
+              <strong>Importante:</strong> Todo procedimiento dental requiere consulta odontológica previa. Esto no es para vender más, es porque cada mascota es distinta y un especialista debe evaluar antes de cualquier intervención bajo anestesia.
+            </div>
+            <p class="microcopy">
+              ¿Por qué un rango y no un precio fijo? Porque un Yorkie de 3 kilos no necesita lo mismo que un Labrador de 35 kilos. En la consulta te damos el precio exacto, sin sorpresas.
+            </p>
+          </div>
+        </div>
+
+        <div class="container reveal">
+          <div class="section-heading compact-heading">
+            <h2>No somos una veterinaria común. Somos los especialistas que Medellín reconoce.</h2>
+          </div>
+          <div class="feature-grid">
+            <article><span aria-hidden="true">🎓</span><h3>Exclusivamente odontología veterinaria</h3><p>Especialización completa en salud oral canina y felina. Nada de servicios generales.</p></article>
+            <article><span aria-hidden="true">🏥</span><h3>Dos sedes en Medellín</h3><p>Guayabal y La Frontera, para que estemos cerca de ti.</p></article>
+            <article><span aria-hidden="true">💉</span><h3>Anestesia 100% monitoreada</h3><p>Anestesiólogo veterinario presente todo el procedimiento.</p></article>
+            <article><span aria-hidden="true">🔬</span><h3>Diagnóstico completo previo</h3><p>Exámenes de sangre siempre, sin atajos.</p></article>
+            <article><span aria-hidden="true">🧰</span><h3>Tecnología de punta</h3><p>Ultrasonido dental y monitoreo de signos vitales en tiempo real.</p></article>
+            <article><span aria-hidden="true">❤️</span><h3>+5.000 mascotas atendidas</h3><p>La experiencia que solo dan años de especialización.</p></article>
+          </div>
+          <div class="section-cta">
+            <a class="btn btn-secondary" href="#prueba-social">Ver resultados reales de nuestros pacientes ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="prueba-social" class="section section-social" aria-labelledby="social-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="section-kicker">Bloque 4 · Prueba social</p>
+            <h2 id="social-title">Resultados reales. Mascotas reales. Sonrisas reales.</h2>
+            <p>Desliza para ver cada transformación.</p>
+          </div>
+          <div class="before-grid">
+            <article class="case-card">
+              <div class="before-after" data-layout="vertical" data-src="assets/antes-despues-oralpets.jpg" style="--position: 50%">
+                <div class="ba-image ba-before" role="img" aria-label="Antes del tratamiento"></div>
+                <div class="ba-image ba-after" role="img" aria-label="Después del tratamiento"></div>
+                <span class="ba-handle" aria-hidden="true"></span>
+                <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" />
+              </div>
+              <h3>Caso canino 01 · Historia por confirmar</h3>
+              <p>Registro visual público de OralPets. Reemplazar por nombre, edad, raza y barrio cuando el cliente entregue la autorización del caso.</p>
+            </article>
+            <article class="case-card">
+              <div class="before-after" data-layout="horizontal" data-src="assets/consulta-odontologica.png" style="--position: 50%">
+                <div class="ba-image ba-before" role="img" aria-label="Antes del tratamiento"></div>
+                <div class="ba-image ba-after" role="img" aria-label="Después del tratamiento"></div>
+                <span class="ba-handle" aria-hidden="true"></span>
+                <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después" />
+              </div>
+              <h3>Caso felino 01 · Historia por confirmar</h3>
+              <p>Registro visual público de OralPets. Completar con datos reales antes de publicar.</p>
+            </article>
+            <article class="case-card pending-case">
+              <div class="pending-visual">
+                <span>Imagen real pendiente</span>
+              </div>
+              <h3>Caso canino 02 · Pendiente</h3>
+              <p>Espacio reservado para el segundo caso canino real con autorización de uso.</p>
+            </article>
+            <article class="case-card pending-case">
+              <div class="pending-visual">
+                <span>Imagen real pendiente</span>
+              </div>
+              <h3>Caso felino 02 · Pendiente</h3>
+              <p>Espacio reservado para el segundo caso felino real con autorización de uso.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="container reviews reveal">
+          <div class="section-heading compact-heading">
+            <h2>Lo que dicen los tutores que ya confiaron en nosotros</h2>
+            <p class="google-flag">Google Reviews · Rating exacto pendiente · Número de reseñas pendiente</p>
+          </div>
+          <div class="review-grid">
+            <article><strong>Reseña Google 01</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+            <article><strong>Reseña Google 02</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+            <article><strong>Reseña Google 03</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+            <article><strong>Reseña Google 04</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+            <article><strong>Reseña Google 05</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+            <article><strong>Reseña Google 06</strong><span>★★★★★</span><p>Texto real pendiente de transcripción desde Google Business Profile.</p></article>
+          </div>
+          <div class="section-cta">
+            <a class="btn btn-secondary" href="https://www.google.com/search?q=OralPets+Medell%C3%ADn+rese%C3%B1as" target="_blank" rel="noopener">Ver todas las reseñas en Google →</a>
+          </div>
+        </div>
+
+        <div class="container instagram reveal">
+          <div>
+            <h2>Síguenos en Instagram</h2>
+            <p>Más de 23.000 personas ya siguen el día a día de OralPets. Únete a nuestra comunidad de tutores que aman la sonrisa de su mascota.</p>
+            <a class="btn btn-secondary" href="https://www.instagram.com/oralpets/" target="_blank" rel="noopener">Seguirnos en Instagram @oralpets</a>
+          </div>
+          <div class="insta-shots" aria-label="Capturas de contenido de Instagram OralPets">
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="assets/caso-1.jpeg"
+              alt="Publicación educativa de OralPets para tutores de gatos"
+              loading="lazy"
+            />
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="assets/caso-2.jpeg"
+              alt="Publicación de OralPets sobre revisión preventiva"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="final-cta reveal">
+          <div class="container">
+            <h2>Tu peludo está a un mensaje de su mejor sonrisa.</h2>
+            <p>Elige el canal que prefieras. Estamos listos para atenderte.</p>
+            <div class="triple-actions">
+              <a class="btn btn-light" href="tel:+573154841552" data-track="click_call">Llamar ahora</a>
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/573154841552?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20consulta%20para%20mi%20mascota"
+                data-track="click_whatsapp"
+              >
+                Escribir por WhatsApp
+              </a>
+              <a
+                class="btn btn-primary js-confirmafy"
+                href="https://wa.me/573154841552?text=Hola%2C%20quiero%20agendar%20online%20una%20consulta%20odontol%C3%B3gica%20para%20mi%20mascota"
+                target="_blank"
+                rel="noopener"
+              >
+                Agendar online (Confirmafy)
+              </a>
+            </div>
+            <small>Atención Lun-Sáb 8am-6pm · Sedes Guayabal y La Frontera, Medellín · Sin servicio domingos y festivos.</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq" aria-labelledby="faq-title">
+        <div class="container reveal">
+          <div class="section-heading compact-heading">
+            <h2 id="faq-title">Preguntas frecuentes de tutores como tú</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>¿Es segura la anestesia para mi mascota?</summary>
+              <p>Sí, cuando se realiza con protocolo médico. En OralPets hacemos exámenes prequirúrgicos, revisamos el estado general y usamos monitoreo continuo con anestesiólogo veterinario durante el procedimiento.</p>
+            </details>
+            <details>
+              <summary>¿Mi mascota es muy mayor para el procedimiento?</summary>
+              <p>La edad no es el factor decisivo. Lo importante es su condición de salud real, que se evalúa con la consulta y los exámenes de sangre.</p>
+            </details>
+            <details>
+              <summary>¿Cuánto dura el procedimiento completo?</summary>
+              <p>Depende del tamaño, condición oral y recuperación anestésica. En la consulta te explicamos el tiempo estimado de entrada, procedimiento y salida para tu caso.</p>
+            </details>
+            <details>
+              <summary>¿Aceptan pagos a cuotas o con tarjeta?</summary>
+              <p>Aceptamos efectivo, transferencias electrónicas, tarjetas débito y crédito, y código QR. La opción de cuotas debe confirmarse con el equipo administrativo antes del go-live.</p>
+            </details>
+            <details>
+              <summary>¿Atienden razas pequeñas y braquicéfalas?</summary>
+              <p>Sí. Perros como Bulldog o Pug, y gatos como Persa, requieren valoración cuidadosa y protocolos ajustados a su anatomía y condición general.</p>
+            </details>
+            <details>
+              <summary>¿Cada cuánto debo traer a mi mascota?</summary>
+              <p>La frecuencia depende de edad, raza, dieta, historial dental y hallazgos en consulta. Muchos tutores necesitan una revisión anual; algunos pacientes requieren controles más cercanos.</p>
+            </details>
+            <details>
+              <summary>¿Qué cuidados debo tener después del procedimiento?</summary>
+              <p>Te entregamos indicaciones específicas, señales de alerta y recomendaciones de higiene. El Plan Sonrisa Saludable incluye kit con cepillo y gel dental.</p>
+            </details>
+            <details>
+              <summary>¿Debo llevar a mi mascota en ayunas?</summary>
+              <p>Para procedimientos bajo anestesia, sí. Las horas exactas de ayuno se confirman según la edad, especie, condición y hora del procedimiento.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="respaldo" class="section backup-form" aria-labelledby="form-title">
+        <div class="container split reveal">
+          <div>
+            <p class="section-kicker">Formulario de respaldo</p>
+            <h2 id="form-title">¿Prefieres dejar tus datos?</h2>
+            <p>Completa esta solicitud y el equipo de OralPets tendrá el contexto básico para contactarte por el canal que prefieras.</p>
+          </div>
+          <form id="lead-form" action="mailto:oralpets@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Nombre del tutor
+              <input name="Nombre" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Celular o WhatsApp
+              <input name="Celular" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              Nombre de la mascota
+              <input name="Mascota" type="text" required />
+            </label>
+            <label>
+              Cuéntanos qué notas en su boca
+              <textarea name="Mensaje" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit" data-track="submit_backup_form">Solicitar contacto</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">OP</span>
+            <span>
+              <strong>OralPets</strong>
+              <small>Odontología Veterinaria Especializada · Medellín</small>
+            </span>
+          </a>
+          <p>Copyright © 2026 OralPets · Todos los derechos reservados.</p>
+        </div>
+        <address>
+          <strong>Sede Guayabal</strong>
+          Calle 1B # 66-61, Barrio Mayorca, Guayabal, Medellín. Cerca al Aeropuerto Olaya Herrera.
+          <strong>Sede La Frontera</strong>
+          Dirección exacta pendiente de confirmación.
+        </address>
+        <div>
+          <strong>Horarios</strong>
+          <p>Lun-Sáb 8am-6pm · Cerrado domingos y festivos.</p>
+          <strong>Contacto</strong>
+          <p>Tel fijo (604) 2093512 · Cel/WhatsApp 315 484 1552 · oralpets@gmail.com</p>
+        </div>
+        <div>
+          <strong>Métodos de pago</strong>
+          <p>Efectivo, transferencias electrónicas, tarjetas débito y crédito, código QR.</p>
+          <strong>Redes</strong>
+          <p><a href="https://www.instagram.com/oralpets/" target="_blank" rel="noopener">Instagram @oralpets</a> · Facebook · TikTok por confirmar</p>
+          <p><a href="politica-privacidad.html">Política de privacidad</a> · <a href="terminos-condiciones.html">Términos y condiciones</a></p>
+        </div>
       </div>
+      <div class="container maps">
+        <iframe
+          title="Mapa de OralPets sede Guayabal"
+          loading="lazy"
+          src="https://www.google.com/maps?q=Calle%201B%20%23%2066-61%20Guayabal%20Medellin&output=embed"
+        ></iframe>
+        <iframe
+          title="Mapa de OralPets sede La Frontera"
+          loading="lazy"
+          src="https://www.google.com/maps?q=OralPets%20Mall%20La%20Frontera%20Medellin&output=embed"
+        ></iframe>
+      </div>
+    </footer>
 
-    </div>
-  </section>
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/573154841552?text=Hola%2C%20quiero%20agendar%20una%20consulta%20odontol%C3%B3gica%20para%20mi%20mascota"
+      aria-label="Escribir a OralPets por WhatsApp"
+      data-track="click_whatsapp"
+    >
+      WhatsApp
+    </a>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Oral Pets · Clínica veterinaria para caninos y felinos · Todos los derechos reservados</p>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
